@@ -734,6 +734,7 @@ class SketchField extends PureComponent {
 
     if (enablePressureBrush) {
       const brush = new fabric.PSBrush(canvas);
+      this._selectedTool.doMouseMove(e);
       brush.width = lineWidth;
       brush.color = lineColor;
       canvas.freeDrawingBrush = brush;
